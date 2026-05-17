@@ -53,9 +53,10 @@ const Contact = () => {
             <div>
               <div className="contact-info-card">
                 <h4>College Address</h4>
-                <p>Government Arts and Science College, Sankarankovil</p>
-                <p>Thiruvengadam Road</p>
-                <p>Sankarankovil, Tamil Nadu &mdash; 627 756</p>
+                <p>Government Arts and Science College,</p>
+                <p>434/2 Thiruvengadam Road,</p>
+                <p>Sankarankovil &mdash; 627 756</p>
+                <p>Tenkasi District, Tamil Nadu</p>
               </div>
               <div className="contact-info-card">
                 <h4><i className="fas fa-phone"></i> Phone &amp; Email</h4>

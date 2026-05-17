@@ -35,7 +35,7 @@ const Home = () => {
               <div className="about-card-body">
                 <span className="about-tag">Government Institution</span>
                 <h3 className="about-card-heading">Empowering Communities Through Education</h3>
-                <p className="about-card-desc">Affiliated to Manonmaniam Sundaranar University, the college is located on a 3.31-acre campus on Tiruvengadam Road, Sankarankovil. The permanent <strong>Government Arts and Science College</strong> building was inaugurated by the Honourable Chief Minister of Tamil Nadu on <strong>22 January 2024</strong>.</p>
+                <p className="about-card-desc">Affiliated to Manonmaniam Sundaranar University, the college is located on a 3.31-acre campus at 434/2 Thiruvengadam Road, Sankarankovil, Tenkasi District. The permanent <strong>Government Arts and Science College</strong> building was inaugurated by the Honourable Chief Minister of Tamil Nadu on <strong>22 January 2024</strong>.</p>
                 <div className="about-stats">
                   <div className="about-stat">
                     <span className="about-stat-num">690+</span>

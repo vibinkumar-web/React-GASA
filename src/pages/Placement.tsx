@@ -52,7 +52,9 @@ const Placement = () => (
             <div className="pi-name">Dr. N. Sukumaran M.A., M.Phil., Ph.D</div>
             <p>Assistant Professor &amp; Head</p>
             <p>Department of Sociology</p>
-            <p>Government Arts and Science College, Sankarankovil &mdash; 627 756</p>
+            <p>Government Arts and Science College,</p>
+            <p>434/2 Thiruvengadam Road, Sankarankovil &mdash; 627 756,</p>
+            <p>Tenkasi District, Tamil Nadu</p>
             <div className="pi-contact">
               <p><i className="fas fa-phone"></i> 9487329304</p>
               <p><i className="fas fa-envelope"></i> sukumaran77450@gmail.com</p>

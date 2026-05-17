@@ -29,7 +29,9 @@ const Finance = () => (
                 <td>
                   <strong>Principal</strong><br />
                   Government Arts and Science College,<br />
-                  Sankarankovil &mdash; 627 756
+                  434/2 Thiruvengadam Road,<br />
+                  Sankarankovil &mdash; 627 756,<br />
+                  Tenkasi District, Tamil Nadu
                 </td>
                 <td>Chairperson</td>
               </tr>
@@ -39,7 +41,9 @@ const Finance = () => (
                   <strong>Mr. SRINIVASAN</strong><br />
                   Bursar / Finance Officer<br />
                   Government Arts and Science College,<br />
-                  Sankarankovil &mdash; 627 756
+                  434/2 Thiruvengadam Road,<br />
+                  Sankarankovil &mdash; 627 756,<br />
+                  Tenkasi District, Tamil Nadu
                 </td>
                 <td>Special Invitee</td>
               </tr>

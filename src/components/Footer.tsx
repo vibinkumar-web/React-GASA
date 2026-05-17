@@ -11,7 +11,7 @@ const Footer = () => (
           <div className="footer-brand">
             <div className="footer-logo-mark">GASC</div>
             <p className="footer-college-name">Government Arts and Science College</p>
-            <p className="footer-location">Sankarankovil, Tamil Nadu</p>
+            <p className="footer-location">Sankarankovil &mdash; 627 756, Tenkasi District, Tamil Nadu</p>
             <p className="footer-about">Empowering students through quality education, research, and holistic development.</p>
           </div>
 
@@ -31,7 +31,7 @@ const Footer = () => (
             <ul className="footer-contact-list">
               <li>
                 <span className="fci">&#9679;</span>
-                <span>Thiruvengadam Road, Sankarankovil,<br />Tamil Nadu &mdash; 627 756</span>
+                <span>434/2 Thiruvengadam Road, Sankarankovil &mdash; 627 756,<br />Tenkasi District, Tamil Nadu</span>
               </li>
               <li>
                 <span className="fci">&#9679;</span>
