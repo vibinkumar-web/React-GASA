@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import PageBanner from '../components/PageBanner';
+import { imgUrl } from '../utils/asset';
 
 const Principal = () => (
   <Layout>
@@ -12,7 +13,7 @@ const Principal = () => (
         <div className="principal-section reveal">
           <div className="principal-photo-wrap">
             <div className="principal-photo">
-              <img src="/images/Staff/GL-Staff/Commerce-GL/venugopal.png" alt="Dr. G. Venugopal, Principal" style={{objectFit:'cover'}} />
+              <img src={imgUrl("images/Staff/GL-Staff/Commerce-GL/venugopal.png")} alt="Dr. G. Venugopal, Principal" style={{objectFit:'cover'}} />
             </div>
             <a href="/pdfs/faculty/Venugopal CV.pdf" target="_blank" className="profile-btn">
               <i className="fas fa-file-alt"></i> Profile &mdash; Click here

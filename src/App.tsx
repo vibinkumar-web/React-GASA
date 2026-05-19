@@ -56,7 +56,7 @@ import PTA from './pages/PTA';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToTop />
       <Routes>
         {/* Main */}

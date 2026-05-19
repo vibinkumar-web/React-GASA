@@ -1,4 +1,5 @@
 import DeptLayout from '../components/DeptLayout';
+import { imgUrl } from '../utils/asset';
 
 const TABS = [
   { id: 'home', label: 'DEPT. HOME' },
@@ -34,9 +35,7 @@ const English = () => (
             <h2 className="dept-heading">Head of the Department</h2>
             <div className="principal-section" style={{background:'#fff',padding:'2rem',borderRadius:'12px',boxShadow:'var(--shadow-sm)',marginBottom:'2rem'}}>
               <div className="principal-photo">
-                <a href="/pdfs/faculty/k_kalagopi.pdf" target="_blank" title="View Dr. K. Kalagopi's Profile">
-                  <img src="/images/Staff/GL-Staff/Tamil-GL/kala gopi.jpeg" alt="Dr. K. Kalagopi, HOD English (Incharge)" style={{objectFit:'cover',cursor:'pointer'}} />
-                </a>
+                <img src={imgUrl("images/Staff/GL-Staff/Tamil-GL/kala gopi.jpeg")} alt="Dr. K. Kalagopi, HOD English (Incharge)" style={{objectFit:'cover'}} />
               </div>
               <div className="principal-text">
                 <h3>DR. K. KALAGOPI</h3>
@@ -68,20 +67,20 @@ const English = () => (
             <h2 className="dept-heading">Faculty Members</h2>
             <div className="faculty-grid">
               {[
-                { name:'DR. K. KALAGOPI', qual:'M.A., M.Phil., Ph.D.', desig:'Associate Professor & Head (I/C)', img:'images/Staff/GL-Staff/Tamil-GL/kala gopi.jpeg', pdf:'faculty/k_kalagopi.pdf' },
-                { name:'DR. A. SUBBULAKSHMI', qual:'M.A., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/Dr SUBBLULAKSHMI.jpeg', pdf:'faculty/a_subbulakshmi.pdf' },
-                { name:'Mrs. SHUNMUGAPRIYA S.', qual:'M.A.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/shunmugapriya.jpg', pdf:'faculty/s_shunmugapriya.pdf' },
-                { name:'Mrs. R. MANI KALA BHARATHI', qual:'M.A., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/DSC_2572.JPG', pdf:'faculty/r_manikalabharathi.pdf' },
-                { name:'DR. R. BALAMURUGAN', qual:'M.A., M.Ed., M.Phil., Ph.D.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/Dr BALAMURUGAN.jpg', pdf:'faculty/r_balamurugan.pdf' },
+                { name:'DR. K. KALAGOPI', qual:'M.A., M.Phil., Ph.D.', desig:'Associate Professor & Head (I/C)', img:'images/Staff/GL-Staff/Tamil-GL/kala gopi.jpeg', pdf:null },
+                { name:'DR. A. SUBBULAKSHMI', qual:'M.A., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/Dr SUBBLULAKSHMI.jpeg', pdf:null },
+                { name:'Mrs. SHUNMUGAPRIYA S.', qual:'M.A.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/shunmugapriya.jpg', pdf:null },
+                { name:'Mrs. R. MANI KALA BHARATHI', qual:'M.A., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/DSC_2572.JPG', pdf:null },
+                { name:'DR. R. BALAMURUGAN', qual:'M.A., M.Ed., M.Phil., Ph.D.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Eng-GL/Dr BALAMURUGAN.jpg', pdf:null },
                 { name:'MRS. AMALA', qual:'M.A., B.Ed.,', desig:'PTA STAFF', img:'images/Logo/sankarankovil-college-logo-1.png', pdf:null },
                 { name:'MRS. RAJADEVI', qual:'M.A.,', desig:'PTA STAFF', img:'images/Staff/GL-Staff/Eng-GL/Raja devi.jpeg', pdf:null },
                 { name:'MRS. ETHAYAMEENA', qual:'M.A.,', desig:'PTA STAFF', img:'images/Logo/sankarankovil-college-logo-1.png', pdf:null },
               ].map(f => (
                 <div key={f.name} className="faculty-card">
                   {f.pdf ? (
-                    <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile"><img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'cover',cursor:'pointer'}} /></a>
+                    <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile"><img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={{objectFit:'cover',cursor:'pointer'}} /></a>
                   ) : (
-                    <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
+                    <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
                   )}
                   <div className="faculty-info">
                     <h3>{f.name}</h3>

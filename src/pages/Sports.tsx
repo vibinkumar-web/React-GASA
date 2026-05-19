@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import PageBanner from '../components/PageBanner';
+import { imgUrl } from '../utils/asset';
 
 const Sports = () => (
   <Layout>
@@ -13,16 +14,13 @@ const Sports = () => (
         <h2 className="section-title">Physical Director</h2>
         <div className="principal-section reveal" style={{maxWidth:'700px',margin:'0 auto 2rem'}}>
           <div className="principal-photo">
-            <a href="/pdfs/faculty/d_selvam.pdf" target="_blank" title="View Profile">
-              <img src="/images/Logo/sankarankovil-college-logo-1.png" alt="D. Selvam, Physical Director" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'}} />
-            </a>
+            <img src={imgUrl("images/Logo/sankarankovil-college-logo-1.png")} alt="D. Selvam, Physical Director" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
           </div>
           <div className="principal-text">
             <h3>D. Selvam</h3>
             <p className="designation">Physical Director</p>
             <p>Mr. D. Selvam serves as the Physical Director of Government Arts and Science College, Sankarankovil. He is responsible for organizing and overseeing all sports and physical education activities of the college, guiding students to participate in inter-collegiate, university-level, and state-level tournaments.</p>
             <p>Under his supervision, students have excelled in various sports events conducted by Manonmaniam Sundaranar University. He is committed to fostering a culture of fitness, teamwork, and sportsmanship among the student community.</p>
-            <p><a href="/pdfs/faculty/d_selvam.pdf" target="_blank" style={{color:'var(--primary-navy)',fontWeight:'600'}}><i className="fas fa-file-alt"></i> View Full Profile (PDF)</a></p>
           </div>
         </div>
       </div>

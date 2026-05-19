@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout';
+import { imgUrl } from '../utils/asset';
 
 const Home = () => {
   const [lightboxImg, setLightboxImg] = useState<string | null>(null);
@@ -14,7 +15,7 @@ const Home = () => {
     <Layout>
       {/* Hero Banner */}
       <section className="hero">
-        <img src="/images/General-Images/unnamed.jpg" alt="Government Arts and Science College, Sankarankovil" className="hero-img" />
+        <img src={imgUrl("images/General-Images/unnamed.jpg")} alt="Government Arts and Science College, Sankarankovil" className="hero-img" />
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1>Government Arts and Science College, Sankarankovil</h1>
@@ -29,7 +30,7 @@ const Home = () => {
           <div className="about-section-layout">
             <div className="about-card reveal">
               <div className="about-card-img">
-                <img src="/images/General-Images/unnamed.jpg" alt="Government Arts and Science College, Sankarankovil" />
+                <img src={imgUrl("images/General-Images/unnamed.jpg")} alt="Government Arts and Science College, Sankarankovil" />
                 <div className="about-img-badge">Est. 2020</div>
               </div>
               <div className="about-card-body">
@@ -101,7 +102,7 @@ const Home = () => {
                   <li>
                     <button
                       className="notification-item"
-                      onClick={() => setLightboxImg('/images/Notification/TNEA - 2026.jpeg')}
+                      onClick={() => setLightboxImg(imgUrl('images/Notification/TNEA - 2026.jpeg'))}
                     >
                       <span className="notification-dot"></span>
                       <span>TNEA &ndash; 2026</span>

@@ -1,5 +1,6 @@
 import Layout from '../components/Layout';
 import PageBanner from '../components/PageBanner';
+import { imgUrl } from '../utils/asset';
 
 const RRC = () => (
   <Layout>
@@ -13,7 +14,7 @@ const RRC = () => (
         <h2 className="section-title">RRC Co-ordinator</h2>
         <div className="principal-section reveal" style={{background:'#fff',padding:'2rem',borderRadius:'12px',boxShadow:'var(--shadow-sm)',justifyContent:'center',textAlign:'center',maxWidth:'700px',margin:'0 auto'}}>
           <div className="principal-photo">
-            <img src="/images/Logo/sankarankovil-college-logo-1.png" alt="Dr. N. Sukumaran, RRC Co-ordinator" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
+            <img src={imgUrl("images/Logo/sankarankovil-college-logo-1.png")} alt="Dr. N. Sukumaran, RRC Co-ordinator" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
           </div>
           <div className="principal-text" style={{textAlign:'center'}}>
             <h3>DR. N. SUKUMARAN</h3>
@@ -29,7 +30,7 @@ const RRC = () => (
         <h2 className="section-title">Red Ribbon Club</h2>
         <div className="reveal" style={{display:'flex',alignItems:'center',gap:'2.5rem',flexWrap:'wrap'}}>
           <div style={{flex:'0 0 auto'}}>
-            <img src="/images/General-Images/Picture2.jpg" alt="Red Ribbon Club" style={{width:'280px',maxWidth:'100%',borderRadius:'10px',border:'2px solid #ccc',display:'block'}} />
+            <img src={imgUrl("images/General-Images/Picture2.jpg")} alt="Red Ribbon Club" style={{width:'280px',maxWidth:'100%',borderRadius:'10px',border:'2px solid #ccc',display:'block'}} />
           </div>
           <div style={{flex:'1',minWidth:'220px'}}>
             <p style={{color:'#444',lineHeight:'1.9'}}>The <strong>Red Ribbon Club (RRC)</strong> at Government Arts and Science College, Sankarankovil is dedicated to spreading awareness on HIV/AIDS prevention and promoting voluntary blood donation. The club regularly organises awareness camps on AIDS and blood donation in rural areas, reaching out to communities that need information the most.</p>

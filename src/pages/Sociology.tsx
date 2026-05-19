@@ -1,4 +1,5 @@
 ﻿import DeptLayout from '../components/DeptLayout';
+import { imgUrl } from '../utils/asset';
 
 const TABS = [
   { id: 'home', label: 'DEPT. HOME' },
@@ -34,9 +35,7 @@ const Sociology = () => (
             <h2 className="dept-heading">Head of the Department</h2>
             <div className="principal-section" style={{background:'#fff',padding:'2rem',borderRadius:'12px',boxShadow:'var(--shadow-sm)',marginBottom:'2rem'}}>
               <div className="principal-photo">
-                <a href="/pdfs/faculty/n_sukumaran.pdf" target="_blank" title="View Dr. N. Sukumaran Profile">
-                  <img src="/images/Logo/sankarankovil-college-logo-1.png" alt="Dr. N. Sukumaran, HOD Sociology" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'}} />
-                </a>
+                <img src={imgUrl("images/Logo/sankarankovil-college-logo-1.png")} alt="Dr. N. Sukumaran, HOD Sociology" style={{objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'}} />
               </div>
               <div className="principal-text">
                 <h3>Dr. N. Sukumaran</h3>
@@ -68,17 +67,17 @@ const Sociology = () => (
             <h2 className="dept-heading">Faculty Members</h2>
             <div className="faculty-grid">
               {[
-                { name:'DR. N. SUKUMARAN', qual:'M.A., M.Phil., Ph.D., MSW, MLM', desig:'Head of the Department', img:'images/Logo/sankarankovil-college-logo-1.png', pdf:'faculty/n_sukumaran.pdf', contain:true },
-                { name:'Mrs. VENNILA D', qual:'M.A.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Socio-GL/vennila.jpg', pdf:'faculty/d_vennila.pdf', contain:false },
-                { name:'DR. PALPANDI P', qual:'M.A., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Socio-GL/Dr. Palpandi.jpg', pdf:'faculty/palpandi.pdf', contain:false },
+                { name:'DR. N. SUKUMARAN', qual:'M.A., M.Phil., Ph.D., MSW, MLM', desig:'Head of the Department', img:'images/Logo/sankarankovil-college-logo-1.png', pdf:null, contain:true },
+                { name:'Mrs. VENNILA D', qual:'M.A.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Socio-GL/vennila.jpg', pdf:null, contain:false },
+                { name:'DR. PALPANDI P', qual:'M.A., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Socio-GL/Dr. Palpandi.jpg', pdf:null, contain:false },
               ].map(f => (
                 <div key={f.name} className="faculty-card">
                   {f.pdf ? (
                     <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile">
-                      <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={f.contain ? {objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'} : {objectFit:'cover',cursor:'pointer'}} />
+                      <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={f.contain ? {objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'} : {objectFit:'cover',cursor:'pointer'}} />
                     </a>
                   ) : (
-                    <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'cover'}} />
+                    <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={f.contain ? {objectFit:'contain',background:'#f5f7fa',padding:'0.5rem'} : {objectFit:'cover'}} />
                   )}
                   <div className="faculty-info">
                     <h3>{f.name}</h3>

@@ -1,4 +1,5 @@
 ﻿import DeptLayout from '../components/DeptLayout';
+import { imgUrl } from '../utils/asset';
 
 const TABS = [
   { id: 'home', label: 'DEPT. HOME' },
@@ -35,7 +36,7 @@ const ComputerScience = () => (
             <div className="principal-section" style={{background:'#fff',padding:'2rem',borderRadius:'12px',boxShadow:'var(--shadow-sm)',marginBottom:'2rem'}}>
               <div className="principal-photo">
                 <a href="/pdfs/faculty/r_shenbagavalli.pdf" target="_blank" title="View Dr. R. Shenbagavalli Profile">
-                  <img src="/images/Staff/GL-Staff/Computer-GL/Shenbagavalli.png" alt="Dr. R. Shenbagavalli, HOD Computer Science" style={{objectFit:'cover',cursor:'pointer'}} />
+                  <img src={imgUrl("images/Staff/GL-Staff/Computer-GL/Shenbagavalli.png")} alt="Dr. R. Shenbagavalli, HOD Computer Science" style={{objectFit:'cover',cursor:'pointer'}} />
                 </a>
               </div>
               <div className="principal-text">
@@ -69,18 +70,18 @@ const ComputerScience = () => (
             <div className="faculty-grid">
               {[
                 { name:'DR. R. SHENBAGAVALLI', qual:'B.E(CSE)., MCA, M.Phil., Ph.D.', desig:'Head of the Department', img:'images/Staff/GL-Staff/Computer-GL/Shenbagavalli.png', pdf:'faculty/r_shenbagavalli.pdf', contain:false },
-                { name:'T. JEYA RAJ', qual:'M.Sc., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Computer-GL/jeya raj.JPG', pdf:'faculty/t_jayaraj.pdf', contain:false },
-                { name:'T. ILAM PARITHI', qual:'M.Sc., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Computer-GL/ilamparuthi.JPG', pdf:'faculty/t_ilam_parithi.pdf', contain:false },
+                { name:'T. JEYA RAJ', qual:'M.Sc., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Computer-GL/jeya raj.JPG', pdf:null, contain:false },
+                { name:'T. ILAM PARITHI', qual:'M.Sc., M.Phil.,', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Computer-GL/ilamparuthi.JPG', pdf:null, contain:false },
                 { name:'MRS. NITHA', qual:'MCA., M.Phil.', desig:'PTA STAFF', img:'images/Staff/PTA-Staff/Nithya.png', pdf:null, contain:false },
                 { name:'MR. RAMAR', qual:'M.Sc., M.Phil.,', desig:'PTA STAFF', img:'images/Staff/PTA-Staff/RamarS.jpg', pdf:null, contain:false },
               ].map(f => (
                 <div key={f.name} className="faculty-card">
                   {f.pdf ? (
                     <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile">
-                      <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={f.contain ? {objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'} : {objectFit:'cover',cursor:'pointer'}} />
+                      <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={f.contain ? {objectFit:'contain',background:'#f5f7fa',padding:'0.5rem',cursor:'pointer'} : {objectFit:'cover',cursor:'pointer'}} />
                     </a>
                   ) : (
-                    <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'cover'}} />
+                    <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={{objectFit:'cover'}} />
                   )}
                   <div className="faculty-info">
                     <h3>{f.name}</h3>

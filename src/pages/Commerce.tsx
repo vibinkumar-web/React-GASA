@@ -1,4 +1,5 @@
 import DeptLayout from '../components/DeptLayout';
+import { imgUrl } from '../utils/asset';
 
 const TABS = [
   { id: 'home', label: 'DEPT. HOME' },
@@ -35,7 +36,7 @@ const Commerce = () => (
             <div className="principal-section" style={{background:'#fff',padding:'2rem',borderRadius:'12px',boxShadow:'var(--shadow-sm)',marginBottom:'2rem'}}>
               <div className="principal-photo">
                 <a href="/pdfs/faculty/Venugopal CV.pdf" target="_blank" title="View Dr. G. Venugopal's Profile">
-                  <img src="/images/Staff/GL-Staff/Commerce-GL/venugopal.png" alt="Dr. G. Venugopal, HOD Commerce" style={{objectFit:'cover',cursor:'pointer'}} />
+                  <img src={imgUrl("images/Staff/GL-Staff/Commerce-GL/venugopal.png")} alt="Dr. G. Venugopal, HOD Commerce" style={{objectFit:'cover',cursor:'pointer'}} />
                 </a>
               </div>
               <div className="principal-text">
@@ -69,16 +70,16 @@ const Commerce = () => (
             <div className="faculty-grid">
               {[
                 { name:'DR. G. VENUGOPAL', qual:'M.COM., M.Phil., MBA., Ph.D.', desig:'Head of the Department', img:'images/Staff/GL-Staff/Commerce-GL/venugopal.png', pdf:'faculty/Venugopal CV.pdf' },
-                { name:'DR. T. RAMALAKSHMI', qual:'M.COM., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Commerce-GL/Dr RAMALAKSHMI.jpeg', pdf:'faculty/t_ramalakshmi.pdf' },
-                { name:'DR. J. SIDHARATHULMUNTHAGA', qual:'M.COM., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Commerce-GL/Dr Siddhartual Muthanga.jpeg', pdf:'faculty/j_sidharathul_munthaga.pdf' },
+                { name:'DR. T. RAMALAKSHMI', qual:'M.COM., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Commerce-GL/Dr RAMALAKSHMI.jpeg', pdf:null },
+                { name:'DR. J. SIDHARATHULMUNTHAGA', qual:'M.COM., Ph.D.', desig:'GUEST LECTURER', img:'images/Staff/GL-Staff/Commerce-GL/Dr Siddhartual Muthanga.jpeg', pdf:null },
                 { name:'MRS. VALLIMAYIL', qual:'M.Com., M.Phil.,', desig:'PTA STAFF', img:'images/Staff/GL-Staff/Commerce-GL/Mrs. Vallimayil.jpg', pdf:null },
                 { name:'MR. A. PEREZHIL PRADHAP SINGH', qual:'M.Com.,', desig:'PTA STAFF', img:'images/Staff/PTA-Staff/P.PRATAP SINGH.jpeg', pdf:null },
               ].map(f => (
                 <div key={f.name} className="faculty-card">
                   {f.pdf ? (
-                    <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile"><img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'cover',cursor:'pointer'}} /></a>
+                    <a href={`/pdfs/${f.pdf}`} target="_blank" title="View Profile"><img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={{objectFit:'cover',cursor:'pointer'}} /></a>
                   ) : (
-                    <img src={`/${f.img}`} alt={f.name} className="faculty-photo" style={{objectFit:'cover'}} />
+                    <img src={imgUrl(f.img)} alt={f.name} className="faculty-photo" style={{objectFit:'cover'}} />
                   )}
                   <div className="faculty-info">
                     <h3>{f.name}</h3>

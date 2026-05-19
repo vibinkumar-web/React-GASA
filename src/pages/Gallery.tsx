@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import PageBanner from '../components/PageBanner';
+import { imgUrl } from '../utils/asset';
 
 const galleryCss = `
   .gallery-others-wrap { margin-top:0.5rem; }
@@ -64,7 +65,7 @@ const Gallery = () => {
             <div className="gallery-grid">
               {filtered.map((item, i) => (
                 <div key={i} className="gallery-item">
-                  <img src={`/${item.src}`} alt={item.cap} onError={hideOnError} />
+                  <img src={imgUrl(item.src)} alt={item.cap} onError={hideOnError} />
                   <div className="gallery-caption">{item.cap}</div>
                 </div>
               ))}
@@ -77,7 +78,7 @@ const Gallery = () => {
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-users"></i></span> PTA Meeting</h3>
                 <div className="gallery-grid">
                   {[1,2,3,4,5].map(n => (
-                    <div key={n} className="gallery-item"><img src={`/images/PTA, Meeting/${n}.jpg`} alt={`PTA Meeting ${n}`} onError={hideOnError} /><div className="gallery-caption">PTA Meeting — {n}</div></div>
+                    <div key={n} className="gallery-item"><img src={imgUrl(`images/PTA, Meeting/${n}.jpg`)} alt={`PTA Meeting ${n}`} onError={hideOnError} /><div className="gallery-caption">PTA Meeting — {n}</div></div>
                   ))}
                 </div>
               </div>
@@ -85,7 +86,7 @@ const Gallery = () => {
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-plane"></i></span> Exposure Visit +2</h3>
                 <div className="gallery-grid">
                   {[1,2,3,4,5,6].map(n => (
-                    <div key={n} className="gallery-item"><img src={`/images/Exposure-visit-2/${n}.jpg`} alt={`Exposure Visit +2 — ${n}`} onError={hideOnError} /><div className="gallery-caption">Exposure Visit +2 — {n}</div></div>
+                    <div key={n} className="gallery-item"><img src={imgUrl(`images/Exposure-visit-2/${n}.jpg`)} alt={`Exposure Visit +2 — ${n}`} onError={hideOnError} /><div className="gallery-caption">Exposure Visit +2 — {n}</div></div>
                   ))}
                 </div>
               </div>
@@ -93,7 +94,7 @@ const Gallery = () => {
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-graduation-cap"></i></span> First Year Orientation Programme</h3>
                 <div className="gallery-grid">
                   {[1,2].map(n => (
-                    <div key={n} className="gallery-item"><img src={`/images/First year Orientation Programme/${n}.jpg`} alt={`Orientation Programme ${n}`} onError={hideOnError} /><div className="gallery-caption">Orientation Programme — {n}</div></div>
+                    <div key={n} className="gallery-item"><img src={imgUrl(`images/First year Orientation Programme/${n}.jpg`)} alt={`Orientation Programme ${n}`} onError={hideOnError} /><div className="gallery-caption">Orientation Programme — {n}</div></div>
                   ))}
                 </div>
               </div>
@@ -101,22 +102,22 @@ const Gallery = () => {
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-landmark"></i></span> Red Ribbon Club (RRC)</h3>
                 <div className="gallery-grid">
                   {[1,2].map(n => (
-                    <div key={n} className="gallery-item"><img src={`/images/RRC/${n}.jpeg`} alt={`Red Ribbon Club ${n}`} onError={hideOnError} /><div className="gallery-caption">Red Ribbon Club (RRC) — {n}</div></div>
+                    <div key={n} className="gallery-item"><img src={imgUrl(`images/RRC/${n}.jpeg`)} alt={`Red Ribbon Club ${n}`} onError={hideOnError} /><div className="gallery-caption">Red Ribbon Club (RRC) — {n}</div></div>
                   ))}
                 </div>
               </div>
               <div className="gallery-sub-section">
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-brain"></i></span> Gender Psychology</h3>
                 <div className="gallery-grid">
-                  <div className="gallery-item"><img src="/images/Gender-psychology/PHOTO-2025-11-23-13-09-25.jpg" alt="Gender Psychology 1" onError={hideOnError} /><div className="gallery-caption">Gender Psychology — 1</div></div>
-                  <div className="gallery-item"><img src="/images/Gender-psychology/PHOTO-2025-11-23-13-09-25 (2).jpg" alt="Gender Psychology 2" onError={hideOnError} /><div className="gallery-caption">Gender Psychology — 2</div></div>
+                  <div className="gallery-item"><img src={imgUrl("images/Gender-psychology/PHOTO-2025-11-23-13-09-25.jpg")} alt="Gender Psychology 1" onError={hideOnError} /><div className="gallery-caption">Gender Psychology — 1</div></div>
+                  <div className="gallery-item"><img src={imgUrl("images/Gender-psychology/PHOTO-2025-11-23-13-09-25 (2).jpg")} alt="Gender Psychology 2" onError={hideOnError} /><div className="gallery-caption">Gender Psychology — 2</div></div>
                 </div>
               </div>
               <div className="gallery-sub-section">
                 <h3 className="gallery-sub-title"><span className="gallery-sub-icon"><i className="fas fa-ambulance"></i></span> Road Safety Club</h3>
                 <div className="gallery-grid">
-                  <div className="gallery-item"><img src="/images/Road Safety Club/IMG_20260123_115146494.jpg" alt="Road Safety Club 1" onError={hideOnError} /><div className="gallery-caption">Road Safety Club — 1</div></div>
-                  <div className="gallery-item"><img src="/images/Road Safety Club/IMG_20260123_115227146_HDR.jpg" alt="Road Safety Club 2" onError={hideOnError} /><div className="gallery-caption">Road Safety Club — 2</div></div>
+                  <div className="gallery-item"><img src={imgUrl("images/Road Safety Club/IMG_20260123_115146494.jpg")} alt="Road Safety Club 1" onError={hideOnError} /><div className="gallery-caption">Road Safety Club — 1</div></div>
+                  <div className="gallery-item"><img src={imgUrl("images/Road Safety Club/IMG_20260123_115227146_HDR.jpg")} alt="Road Safety Club 2" onError={hideOnError} /><div className="gallery-caption">Road Safety Club — 2</div></div>
                 </div>
               </div>
             </div>
@@ -132,7 +133,7 @@ const Gallery = () => {
                     'PHOTO-2025-07-22-16-39-17.jpg','PHOTO-2025-08-11-07-33-32.jpg',
                     'PHOTO-2025-12-19-16-46-48.jpg','PHOTO-2026-01-29-12-53-44.jpg','PHOTO-2026-01-29-12-53-44_1.jpg'
                   ].map((f,i) => (
-                    <div key={i} className="gallery-item"><img src={`/images/News/${f}`} alt={`News ${i+1}`} onError={hideOnError} /><div className="gallery-caption">News — {i+1}</div></div>
+                    <div key={i} className="gallery-item"><img src={imgUrl(`images/News/${f}`)} alt={`News ${i+1}`} onError={hideOnError} /><div className="gallery-caption">News — {i+1}</div></div>
                   ))}
                 </div>
               </div>
